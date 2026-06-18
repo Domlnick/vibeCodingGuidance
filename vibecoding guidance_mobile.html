@@ -4,7 +4,7 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   VibeCoding Guide
+   AI Guide
   </title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -295,6 +295,69 @@
   .chapter-content[hidden],
   .subnav .chapter-panel[hidden] {
     display: none !important;
+  }
+
+
+  /* ---------- no-JS / mobile file preview chapter fallback ---------- */
+  .subnav .chapter-panel,
+  main .chapter-content {
+    display: none;
+  }
+
+  .subnav [data-chapter-panel="overview"],
+  main [data-chapter-content="overview"] {
+    display: block;
+  }
+
+  body:has([id^="prompt-"]:target) .subnav .chapter-panel,
+  body:has([id^="prompt-"]:target) main .chapter-content,
+  body:has([id^="context-"]:target) .subnav .chapter-panel,
+  body:has([id^="context-"]:target) main .chapter-content,
+  body:has([id^="mcp-"]:target) .subnav .chapter-panel,
+  body:has([id^="mcp-"]:target) main .chapter-content,
+  body:has([id^="extension-"]:target) .subnav .chapter-panel,
+  body:has([id^="extension-"]:target) main .chapter-content,
+  body:has([id^="advanced-"]:target) .subnav .chapter-panel,
+  body:has([id^="advanced-"]:target) main .chapter-content {
+    display: none;
+  }
+
+  body:has([id^="overview-"]:target) .subnav [data-chapter-panel="overview"],
+  body:has([id^="overview-"]:target) main [data-chapter-content="overview"],
+  body:has([id^="prompt-"]:target) .subnav [data-chapter-panel="prompt"],
+  body:has([id^="prompt-"]:target) main [data-chapter-content="prompt"],
+  body:has([id^="context-"]:target) .subnav [data-chapter-panel="context"],
+  body:has([id^="context-"]:target) main [data-chapter-content="context"],
+  body:has([id^="mcp-"]:target) .subnav [data-chapter-panel="mcp"],
+  body:has([id^="mcp-"]:target) main [data-chapter-content="mcp"],
+  body:has([id^="extension-"]:target) .subnav [data-chapter-panel="mcp"],
+  body:has([id^="extension-"]:target) main [data-chapter-content="mcp"],
+  body:has([id^="advanced-"]:target) .subnav [data-chapter-panel="advanced"],
+  body:has([id^="advanced-"]:target) main [data-chapter-content="advanced"] {
+    display: block;
+  }
+
+  body:has([id^="prompt-"]:target) .rail a.active,
+  body:has([id^="context-"]:target) .rail a.active,
+  body:has([id^="mcp-"]:target) .rail a.active,
+  body:has([id^="extension-"]:target) .rail a.active,
+  body:has([id^="advanced-"]:target) .rail a.active {
+    background: transparent;
+    border-color: transparent;
+    color: var(--ink-soft);
+    font-weight: 400;
+  }
+
+  body:has([id^="overview-"]:target) .rail a[data-chapter="overview"],
+  body:has([id^="prompt-"]:target) .rail a[data-chapter="prompt"],
+  body:has([id^="context-"]:target) .rail a[data-chapter="context"],
+  body:has([id^="mcp-"]:target) .rail a[data-chapter="mcp"],
+  body:has([id^="extension-"]:target) .rail a[data-chapter="mcp"],
+  body:has([id^="advanced-"]:target) .rail a[data-chapter="advanced"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
   }
 
   .chapter-content {
@@ -934,7 +997,7 @@ main .handoff-node {
   <div class="shell">
    <aside aria-label="대메뉴" class="rail">
     <div class="rail-title">
-     VibeCoding
+     AI Guide
     </div>
     <nav>
      <ol>
@@ -991,7 +1054,7 @@ main .handoff-node {
      </ol>
     </nav>
    </aside>
-   <aside aria-label="VibeCoding Guide 소메뉴" class="subnav">
+   <aside aria-label="AI Guide 소메뉴" class="subnav">
     <div class="kicker">
      Selected Chapter
     </div>
@@ -1043,7 +1106,7 @@ main .handoff-node {
        </li>
       </ol>
      </div>
-     <div class="chapter-panel" data-chapter-panel="prompt" hidden="">
+     <div class="chapter-panel" data-chapter-panel="prompt">
       <span class="chapter-label">
        01 Prompt Engineering
       </span>
@@ -1163,7 +1226,7 @@ main .handoff-node {
        </li>
       </ol>
      </div>
-     <div class="chapter-panel" data-chapter-panel="context" hidden="">
+     <div class="chapter-panel" data-chapter-panel="context">
       <span class="chapter-label">
        02 Context Engineering
       </span>
@@ -1298,7 +1361,7 @@ main .handoff-node {
        </li>
       </ol>
      </div>
-     <div class="chapter-panel" data-chapter-panel="mcp" hidden="">
+     <div class="chapter-panel" data-chapter-panel="mcp">
       <span class="chapter-label">
        03 Tools &amp; Extension
       </span>
@@ -1485,7 +1548,7 @@ main .handoff-node {
        </li>
       </ol>
      </div>
-     <div class="chapter-panel" data-chapter-panel="advanced" hidden="">
+     <div class="chapter-panel" data-chapter-panel="advanced">
       <span class="chapter-label">
        04 Advanced
       </span>
@@ -2011,7 +2074,7 @@ main .handoff-node {
        </footer>
       </section>
      </article>
-     <article class="chapter-content" data-chapter-content="prompt" hidden="">
+     <article class="chapter-content" data-chapter-content="prompt">
       <header class="hero" id="prompt-top">
        <h1>
         Prompt Engineering
@@ -2872,7 +2935,7 @@ main .handoff-node {
         </footer>
       </section>
      </article>
-     <article class="chapter-content" data-chapter-content="context" hidden="">
+     <article class="chapter-content" data-chapter-content="context">
       HERO
       <header class="hero" id="context-top">
        <h1>
@@ -3838,7 +3901,7 @@ main .handoff-node {
         </footer>
       </section>
      </article>
-     <article class="chapter-content" data-chapter-content="mcp" hidden="">
+     <article class="chapter-content" data-chapter-content="mcp">
       <header class="hero chapter-hero" id="mcp-top">
        <div class="eyebrow">
         03 Extension
@@ -3892,7 +3955,7 @@ main .handoff-node {
          <b>
           3.5
          </b>
-         체크리스트
+         실습 체크리스트
         </span>
        </div>
       </header>
@@ -5701,12 +5764,23 @@ main .handoff-node {
           — commands, hooks, agents, MCP servers, skills를 하나의 패키지로 묶어 같은 개발 환경에 배포할 때 적합하다.
          </li>
         </ul>
-        <div class="note key">
-          <span class="lab">판단 기준</span>
-          선택 기준은 <b>“무엇을 확장하느냐”</b>다.
-          외부 데이터·도구 연결은 <b>MCP</b>,
-          반복 작업 방식의 재사용은 <b>Skills</b>,
-          특정 실행 환경에 붙는 기능 확장은 <b>Plugin</b>으로 보면 된다.
+        <div class="note">
+         <span class="lab">
+          판단 기준
+         </span>
+         선택 기준은 “무엇을 확장하느냐”다.
+         <b>
+          접근 대상
+         </b>
+         을 확장하면 MCP,
+         <b>
+          작업 방식
+         </b>
+         을 확장하면 Skills,
+         <b>
+          실행 환경
+         </b>
+         을 확장하면 Plugin으로 보는 것이 가장 단순하다.
         </div>
        </div>
        <div class="sub" id="extension-difference-combination">
@@ -5825,7 +5899,7 @@ main .handoff-node {
       <section id="extension-checklist-section">
         <div class="sec-head">
           <span class="sec-num">3.5</span>
-          <h2>체크리스트</h2>
+          <h2>확인 체크리스트</h2>
         </div>
         <p class="sec-kicker soft">
           MCP, Skills, Plugin을 바로 적용하기보다, 내 프로젝트에서 어떤 확장이 필요한지 확인하고 적용 기준을 정리한다.
@@ -5844,7 +5918,7 @@ main .handoff-node {
           아래 항목은 순서대로 수행하는 절차가 아니라, Extension 적용 전 확인해야 할 점검 항목이다.
         </p>
         <p class="progress" id="extension-progress">
-          0 / 8 완료
+          0 / 9 완료
         </p>
 
         <ul class="checklist" id="extension-checklist">
@@ -5997,7 +6071,7 @@ main .handoff-node {
        Extension Draft
       </footer>
      </article>
-     <article class="chapter-content" data-chapter-content="advanced" hidden="">
+     <article class="chapter-content" data-chapter-content="advanced">
       <header class="hero" id="advanced-top">
        <div class="eyebrow">
         04 Advanced
@@ -7457,6 +7531,7 @@ main .handoff-node {
         mcp: '03 Extension',
         advanced: '04 Advanced'
       };
+
       var topIds = {
         overview: 'overview-top',
         prompt: 'prompt-top',
@@ -7464,13 +7539,60 @@ main .handoff-node {
         mcp: 'mcp-top',
         advanced: 'advanced-top'
       };
+
       var activeChapter = 'overview';
       var observer = null;
       var currentSubnavLink = null;
       var subnavTitle = document.getElementById('subnav-title');
       var topButton = document.querySelector('.top-button');
 
-      function setActiveChapter(chapter, shouldScroll) {
+      function getChapterFromTargetId(targetId) {
+        var id = targetId || '';
+        if (id.indexOf('prompt-') === 0) return 'prompt';
+        if (id.indexOf('context-') === 0) return 'context';
+        if (id.indexOf('mcp-') === 0 || id.indexOf('extension-') === 0) return 'mcp';
+        if (id.indexOf('advanced-') === 0) return 'advanced';
+        return 'overview';
+      }
+
+      function getChapterFromHash(hash) {
+        return getChapterFromTargetId((hash || window.location.hash || '').replace('#', ''));
+      }
+
+      function updateUrl(hash) {
+        if (!hash) return;
+        try {
+          history.pushState(null, '', hash);
+        } catch (error) {
+          window.location.hash = hash;
+        }
+      }
+
+      function scrollToTarget(targetId, smooth) {
+        var target = document.getElementById(targetId);
+        if (!target) return;
+
+        requestAnimationFrame(function() {
+          try {
+            target.scrollIntoView({
+              behavior: smooth ? 'smooth' : 'auto',
+              block: 'start'
+            });
+          } catch (error) {
+            target.scrollIntoView(true);
+          }
+        });
+      }
+
+      function clearInitialFallbackState() {
+        document.querySelectorAll('[data-chapter-panel], [data-chapter-content]').forEach(function(el) {
+          el.hidden = false;
+        });
+      }
+
+      function setActiveChapter(chapter, options) {
+        options = options || {};
+        if (!titles[chapter]) chapter = 'overview';
         activeChapter = chapter;
 
         document.querySelectorAll('.rail a[data-chapter]').forEach(function(link) {
@@ -7485,27 +7607,23 @@ main .handoff-node {
           content.hidden = content.dataset.chapterContent !== chapter;
         });
 
-        if (subnavTitle) subnavTitle.innerHTML = titles[chapter] || '';
+        if (subnavTitle) subnavTitle.textContent = titles[chapter] || '';
         if (topButton) topButton.setAttribute('href', '#' + topIds[chapter]);
 
         resetScrollSpy();
 
-        if (shouldScroll) {
-          requestAnimationFrame(function() {
-            var target = document.getElementById(topIds[chapter]);
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          });
-        }
+        if (options.updateHash) updateUrl(options.hash || ('#' + topIds[chapter]));
+        if (options.scrollTo) scrollToTarget(options.scrollTo, options.smooth !== false);
       }
 
       function resetScrollSpy() {
-        if (observer) observer.disconnect();
+        if (observer && observer.disconnect) observer.disconnect();
         if (currentSubnavLink) currentSubnavLink.classList.remove('active');
         currentSubnavLink = null;
 
         var activeContent = document.querySelector('[data-chapter-content="' + activeChapter + '"]');
         var activePanel = document.querySelector('[data-chapter-panel="' + activeChapter + '"]');
-        if (!activeContent || !activePanel) return;
+        if (!activeContent || !activePanel || !('IntersectionObserver' in window)) return;
 
         var links = {};
         activePanel.querySelectorAll('a[href^="#"]').forEach(function(link) {
@@ -7527,56 +7645,88 @@ main .handoff-node {
         targets.forEach(function(target) { observer.observe(target); });
       }
 
-      function detectChapterFromHash() {
-        var hash = window.location.hash.replace('#', '');
-        if (hash.indexOf('prompt-') === 0) return 'prompt';
-        if (hash.indexOf('context-') === 0) return 'context';
-        if (hash.indexOf('mcp-') === 0 || hash.indexOf('extension-') === 0) return 'mcp';
-        if (hash.indexOf('advanced-') === 0) return 'advanced';
-        return 'overview';
-      }
-
-      document.querySelectorAll('.rail a[data-chapter]').forEach(function(link) {
-        link.addEventListener('click', function(event) {
+      document.addEventListener('click', function(event) {
+        var railLink = event.target.closest && event.target.closest('.rail a[data-chapter]');
+        if (railLink) {
           event.preventDefault();
-          var chapter = link.dataset.chapter;
-          setActiveChapter(chapter, true);
-          history.replaceState(null, '', link.getAttribute('href'));
+          var chapter = railLink.dataset.chapter || 'overview';
+          var targetId = topIds[chapter] || 'overview-top';
+          setActiveChapter(chapter, {
+            updateHash: true,
+            hash: '#' + targetId,
+            scrollTo: targetId,
+            smooth: true
+          });
+          return;
+        }
+
+        var subnavLink = event.target.closest && event.target.closest('.subnav a[href^="#"]');
+        if (subnavLink) {
+          event.preventDefault();
+          var hash = subnavLink.getAttribute('href') || '#overview-top';
+          var targetId = hash.slice(1);
+          var chapter = getChapterFromTargetId(targetId);
+          setActiveChapter(chapter, {
+            updateHash: true,
+            hash: hash,
+            scrollTo: targetId,
+            smooth: true
+          });
+          return;
+        }
+
+        var topLink = event.target.closest && event.target.closest('.top-button');
+        if (topLink) {
+          event.preventDefault();
+          var topId = topIds[activeChapter] || 'overview-top';
+          setActiveChapter(activeChapter, {
+            updateHash: true,
+            hash: '#' + topId,
+            scrollTo: topId,
+            smooth: true
+          });
+        }
+      });
+
+      window.addEventListener('popstate', function() {
+        var hash = window.location.hash || '#overview-top';
+        var targetId = hash.slice(1) || 'overview-top';
+        setActiveChapter(getChapterFromHash(hash), {
+          scrollTo: targetId,
+          smooth: false
         });
       });
 
-      document.querySelectorAll('.subnav a[href^="#"]').forEach(function(link) {
-        link.addEventListener('click', function() {
-          var hash = link.getAttribute('href').slice(1);
-          if (hash.indexOf('overview-') === 0 && activeChapter !== 'overview') setActiveChapter('overview', false);
-          if (hash.indexOf('prompt-') === 0 && activeChapter !== 'prompt') setActiveChapter('prompt', false);
-          if (hash.indexOf('context-') === 0 && activeChapter !== 'context') setActiveChapter('context', false);
-          if ((hash.indexOf('mcp-') === 0 || hash.indexOf('extension-') === 0) && activeChapter !== 'mcp') setActiveChapter('mcp', false);
-          if (hash.indexOf('advanced-') === 0 && activeChapter !== 'advanced') setActiveChapter('advanced', false);
+      window.addEventListener('hashchange', function() {
+        var hash = window.location.hash || '#overview-top';
+        var targetId = hash.slice(1) || 'overview-top';
+        setActiveChapter(getChapterFromHash(hash), {
+          scrollTo: targetId,
+          smooth: false
         });
       });
-
-      if (topButton) {
-        topButton.addEventListener('click', function(event) {
-          event.preventDefault();
-          var target = document.getElementById(topIds[activeChapter]);
-          if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      }
 
       document.querySelectorAll('.checklist').forEach(function(list) {
         var boxes = Array.prototype.slice.call(list.querySelectorAll('input[type="checkbox"]'));
         var progress = list.parentElement.querySelector('.progress');
         if (!progress) return;
+
         function update() {
           var done = boxes.filter(function(box) { return box.checked; }).length;
           progress.textContent = done + ' / ' + boxes.length + ' 완료';
         }
+
         boxes.forEach(function(box) { box.addEventListener('change', update); });
         update();
       });
 
-      setActiveChapter(detectChapterFromHash(), false);
+      clearInitialFallbackState();
+      var initialHash = window.location.hash || '#overview-top';
+      var initialTargetId = initialHash.slice(1) || 'overview-top';
+      setActiveChapter(getChapterFromHash(initialHash), {
+        scrollTo: initialTargetId,
+        smooth: false
+      });
     })();
   </script>
  </body>
