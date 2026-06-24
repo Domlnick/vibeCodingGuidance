@@ -587,346 +587,546 @@
   
 
   /* ---------- advanced chapter components ---------- */
-main .harness-diagram {
-        margin: 24px 0 30px;
-        overflow: hidden;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface-2);
-      }
+  main .harness-diagram {
+          margin: 24px 0 30px;
+          overflow: hidden;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          background: var(--surface-2);
+        }
 
-main .harness-diagram-head {
-        padding: 16px 20px;
-        border-bottom: 1px solid var(--line);
-        background: var(--code-bg);
-        color: var(--code-ink);
-      }
+  main .harness-diagram-head {
+          padding: 16px 20px;
+          border-bottom: 1px solid var(--line);
+          background: var(--code-bg);
+          color: var(--code-ink);
+        }
 
-main .harness-diagram-head .tag {
-        display: block;
-        margin-bottom: 6px;
-        color: #E9B97A;
-        font-family: var(--mono);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
+  main .harness-diagram-head .tag {
+          display: block;
+          margin-bottom: 6px;
+          color: #E9B97A;
+          font-family: var(--mono);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
 
-main .harness-diagram-head h4 {
-        margin: 0;
-        font-family: var(--display);
-        font-size: 18px;
-        font-weight: 600;
-      }
+  main .harness-diagram-head h4 {
+          margin: 0;
+          font-family: var(--display);
+          font-size: 18px;
+          font-weight: 600;
+        }
 
-main .harness-split {
-        display: grid;
-        grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
-        gap: 16px;
-        padding: 20px;
-      }
+  main .harness-split {
+          display: grid;
+          grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
+          gap: 16px;
+          padding: 20px;
+        }
 
-main .harness-box {
-        padding: 18px 20px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface);
-      }
+  main .harness-box {
+          padding: 18px 20px;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          background: var(--surface);
+        }
 
-main .harness-box .tag {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
+  main .harness-box .tag {
+          display: block;
+          margin-bottom: 6px;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
 
-main .harness-box h4 {
-        margin: 0 0 8px;
-        font-family: var(--display);
-        font-size: 17px;
-        font-weight: 600;
-      }
+  main .harness-box h4 {
+          margin: 0 0 8px;
+          font-family: var(--display);
+          font-size: 17px;
+          font-weight: 600;
+        }
 
-main .harness-box p {
-        margin: 0 0 12px;
-        color: var(--ink-soft);
-        font-size: 14.5px;
-        line-height: 1.6;
-      }
+  main .harness-box p {
+          margin: 0 0 12px;
+          color: var(--ink-soft);
+          font-size: 14.5px;
+          line-height: 1.6;
+        }
 
-main .harness-items {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 8px;
-      }
+  main .harness-items {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
 
-main .harness-items li {
-        padding: 8px 10px;
-        border: 1px solid var(--line);
-        border-radius: 9px;
-        background: var(--surface-2);
-        color: var(--ink-soft);
-        font-size: 13.5px;
-        line-height: 1.45;
-      }
+  main .harness-items li {
+          padding: 8px 10px;
+          border: 1px solid var(--line);
+          border-radius: 9px;
+          background: var(--surface-2);
+          color: var(--ink-soft);
+          font-size: 13.5px;
+          line-height: 1.45;
+        }
 
-main .harness-items.single {
+  main .harness-items.single {
+          grid-template-columns: 1fr;
+        }
+
+  main .orchestration-flow {
+          margin: 24px 0 30px;
+          display: grid;
+          grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+          gap: 10px;
+          align-items: stretch;
+        }
+
+  main .flow-node,
+    main .delegate-node {
+          padding: 18px 20px;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          background: var(--surface);
+        }
+
+  main .flow-node .tag,
+    main .delegate-node .tag {
+          display: block;
+          margin-bottom: 6px;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
+
+  main .flow-node h4,
+    main .delegate-node h4 {
+          margin: 0 0 8px;
+          font-family: var(--display);
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+  main .flow-node p,
+    main .delegate-node p {
+          margin: 0;
+          color: var(--ink-soft);
+          font-size: 14.5px;
+          line-height: 1.6;
+        }
+
+  main .flow-arrow {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 18px;
+          font-weight: 600;
+        }
+
+  main .delegation-diagram {
+          margin: 24px 0 30px;
+          padding: 20px;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          background: var(--surface-2);
+        }
+
+  main .delegation-diagram .main-agent,
+    main .delegation-diagram .final-agent {
+          max-width: 520px;
+          margin: 0 auto;
+          background: var(--surface);
+        }
+
+  main .delegate-split {
+          width: min(72%, 560px);
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 14px;
+          height: 34px;
+        }
+
+  main .delegate-split span {
+          position: relative;
+          display: block;
+        }
+
+  main .delegate-split span::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          width: 1px;
+          height: 34px;
+          background: var(--line-strong);
+        }
+
+  main .delegate-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+        }
+
+  main .delegate-merge {
+          margin: 18px 0;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: .06em;
+          text-align: center;
+        }
+
+  main .multi-agent-diagram,
+    main .cross-cli-diagram {
+          margin: 24px 0 30px;
+          padding: 20px;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          background: var(--surface-2);
+        }
+
+  main .multi-agent-diagram .diagram-title,
+    main .cross-cli-diagram .diagram-title {
+          margin: 0 0 16px;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
+
+  main .orchestrator-node,
+    main .agent-node,
+    main .handoff-node,
+    main .merge-node {
+          padding: 16px 18px;
+          border: 1px solid var(--line);
+          border-radius: var(--radius);
+          background: var(--surface);
+        }
+
+  main .orchestrator-node {
+          max-width: 520px;
+          margin: 0 auto;
+          border-color: var(--accent-soft);
+          background: var(--code-bg);
+          color: var(--code-ink);
+        }
+
+  main .orchestrator-node .tag,
+    main .agent-node .tag,
+    main .handoff-node .tag,
+    main .merge-node .tag {
+          display: block;
+          margin-bottom: 6px;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
+
+  main .orchestrator-node .tag {
+          color: #E9B97A;
+        }
+
+  main .orchestrator-node h4,
+    main .agent-node h4,
+    main .handoff-node h4,
+    main .merge-node h4 {
+          margin: 0 0 8px;
+          font-family: var(--display);
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+  main .orchestrator-node p,
+    main .agent-node p,
+    main .handoff-node p,
+    main .merge-node p {
+          margin: 0;
+          color: var(--ink-soft);
+          font-size: 14.5px;
+          line-height: 1.6;
+        }
+
+  main .orchestrator-node p {
+          color: #C3CDDC;
+        }
+
+  main .agent-row {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+          margin-top: 18px;
+        }
+
+  main .diagram-arrow-down {
+          margin: 14px 0;
+          color: var(--accent);
+          font-family: var(--mono);
+          font-size: 12px;
+          font-weight: 600;
+          letter-spacing: .06em;
+          text-align: center;
+        }
+
+  main .merge-node {
+          max-width: 620px;
+          margin: 0 auto;
+          background: var(--surface);
+        }
+
+  main .cross-cli-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 14px;
+          margin: 18px 0;
+        }
+
+  main .handoff-node {
+          border-style: dashed;
+          background: var(--surface);
+        }
+
+
+    @media (max-width: 860px) {
+      main .harness-split,
+      main .delegate-grid,
+      main .agent-row,
+      main .cross-cli-grid {
         grid-template-columns: 1fr;
       }
 
-main .orchestration-flow {
-        margin: 24px 0 30px;
-        display: grid;
-        grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
-        gap: 10px;
-        align-items: stretch;
+      main .orchestration-flow {
+        grid-template-columns: 1fr;
       }
 
-main .flow-node,
-  main .delegate-node {
-        padding: 18px 20px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface);
+      main .flow-arrow {
+        min-height: 18px;
+        transform: rotate(90deg);
       }
 
-main .flow-node .tag,
-  main .delegate-node .tag {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: .08em;
-        text-transform: uppercase;
+      main .delegate-split {
+        display: none;
       }
+    }
 
-main .flow-node h4,
-  main .delegate-node h4 {
-        margin: 0 0 8px;
-        font-family: var(--display);
-        font-size: 16px;
-        font-weight: 600;
-      }
+    /* ---------- prompt modern note toggle ---------- */
 
-main .flow-node p,
-  main .delegate-node p {
-        margin: 0;
-        color: var(--ink-soft);
-        font-size: 14.5px;
-        line-height: 1.6;
-      }
+  main .more-toggle-wrap {
 
-main .flow-arrow {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 18px;
-        font-weight: 600;
-      }
+    margin: 24px 0 0;
 
-main .delegation-diagram {
-        margin: 24px 0 30px;
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface-2);
-      }
+  }
 
-main .delegation-diagram .main-agent,
-  main .delegation-diagram .final-agent {
-        max-width: 520px;
-        margin: 0 auto;
-        background: var(--surface);
-      }
+  main .more-toggle-button {
 
-main .delegate-split {
-        width: min(72%, 560px);
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 14px;
-        height: 34px;
-      }
+    display: inline-flex;
 
-main .delegate-split span {
-        position: relative;
-        display: block;
-      }
+    align-items: center;
 
-main .delegate-split span::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        width: 1px;
-        height: 34px;
-        background: var(--line-strong);
-      }
+    justify-content: center;
 
-main .delegate-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-      }
+    gap: 8px;
 
-main .delegate-merge {
-        margin: 18px 0;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: .06em;
-        text-align: center;
-      }
+    min-height: 42px;
 
-main .multi-agent-diagram,
-  main .cross-cli-diagram {
-        margin: 24px 0 30px;
-        padding: 20px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface-2);
-      }
+    padding: 0 16px;
 
-main .multi-agent-diagram .diagram-title,
-  main .cross-cli-diagram .diagram-title {
-        margin: 0 0 16px;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
+    border: 1px solid var(--accent);
 
-main .orchestrator-node,
-  main .agent-node,
-  main .handoff-node,
-  main .merge-node {
-        padding: 16px 18px;
-        border: 1px solid var(--line);
-        border-radius: var(--radius);
-        background: var(--surface);
-      }
+    border-radius: 999px;
 
-main .orchestrator-node {
-        max-width: 520px;
-        margin: 0 auto;
-        border-color: var(--accent-soft);
-        background: var(--code-bg);
-        color: var(--code-ink);
-      }
+    background: var(--surface);
 
-main .orchestrator-node .tag,
-  main .agent-node .tag,
-  main .handoff-node .tag,
-  main .merge-node .tag {
-        display: block;
-        margin-bottom: 6px;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 11px;
-        font-weight: 600;
-        letter-spacing: .08em;
-        text-transform: uppercase;
-      }
+    color: var(--accent);
 
-main .orchestrator-node .tag {
-        color: #E9B97A;
-      }
+    font-family: var(--mono);
 
-main .orchestrator-node h4,
-  main .agent-node h4,
-  main .handoff-node h4,
-  main .merge-node h4 {
-        margin: 0 0 8px;
-        font-family: var(--display);
-        font-size: 16px;
-        font-weight: 600;
-      }
+    font-size: 12px;
 
-main .orchestrator-node p,
-  main .agent-node p,
-  main .handoff-node p,
-  main .merge-node p {
-        margin: 0;
-        color: var(--ink-soft);
-        font-size: 14.5px;
-        line-height: 1.6;
-      }
+    font-weight: 600;
 
-main .orchestrator-node p {
-        color: #C3CDDC;
-      }
+    letter-spacing: .04em;
 
-main .agent-row {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: 18px;
-      }
+    cursor: pointer;
 
-main .diagram-arrow-down {
-        margin: 14px 0;
-        color: var(--accent);
-        font-family: var(--mono);
-        font-size: 12px;
-        font-weight: 600;
-        letter-spacing: .06em;
-        text-align: center;
-      }
+    transition: background .15s, color .15s, transform .15s;
 
-main .merge-node {
-        max-width: 620px;
-        margin: 0 auto;
-        background: var(--surface);
-      }
+  }
 
-main .cross-cli-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        margin: 18px 0;
-      }
+  main .more-toggle-button:hover {
 
-main .handoff-node {
-        border-style: dashed;
-        background: var(--surface);
-      }
+    transform: translateY(-1px);
 
+    background: var(--accent);
+
+    color: #fff;
+
+  }
+
+  main .more-toggle-button .ico {
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    transition: transform .15s;
+
+  }
+
+  main .more-toggle-button[aria-expanded="true"] .ico {
+
+    transform: rotate(180deg);
+
+  }
+
+  main .modern-prompt-note {
+
+    margin-top: 18px;
+
+    padding: 22px 24px;
+
+    border: 1px solid var(--line);
+
+    border-left: 3px solid var(--accent);
+
+    border-radius: var(--radius);
+
+    background: var(--surface-2);
+
+  }
+
+  main .modern-prompt-note[hidden] {
+
+    display: none !important;
+
+  }
+
+  main .modern-prompt-note .tag {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+
+    font-family: var(--mono);
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
+  }
+
+  main .modern-prompt-note h4 {
+
+    margin: 0 0 12px;
+
+    font-family: var(--display);
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    letter-spacing: -.01em;
+
+  }
+
+  main .modern-prompt-note p {
+
+    margin: 0 0 14px;
+
+    color: var(--ink-soft);
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+  }
+
+  main .modern-prompt-note .modern-map {
+
+    margin: 18px 0 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+  }
+
+  main .modern-prompt-note .modern-card {
+
+    padding: 15px 16px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    background: var(--surface);
+
+  }
+
+  main .modern-prompt-note .modern-card b {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: var(--ink);
+
+    font-family: var(--display);
+
+    font-size: 15.5px;
+
+    font-weight: 600;
+
+  }
+
+  main .modern-prompt-note .modern-card span {
+
+    display: block;
+
+    color: var(--ink-soft);
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+  }
 
   @media (max-width: 860px) {
-    main .harness-split,
-    main .delegate-grid,
-    main .agent-row,
-    main .cross-cli-grid {
+
+    main .modern-prompt-note .modern-map {
+
       grid-template-columns: 1fr;
+
     }
 
-    main .orchestration-flow {
-      grid-template-columns: 1fr;
-    }
-
-    main .flow-arrow {
-      min-height: 18px;
-      transform: rotate(90deg);
-    }
-
-    main .delegate-split {
-      display: none;
-    }
   }
   </style>
  </head>
@@ -1030,6 +1230,11 @@ main .handoff-node {
           </a>
          </li>
          <li>
+          <a href="#overview-coding-agent">
+           코딩 에이전트
+          </a>
+         </li>
+         <li>
           <a href="#overview-orchestration">
            Orchestration
           </a>
@@ -1037,6 +1242,11 @@ main .handoff-node {
          <li>
           <a href="#overview-summary">
            Summary
+          </a>
+         </li>
+         <li>
+          <a href="#overview-products">
+           상용 제품군
           </a>
          </li>
         </ul>
@@ -1191,6 +1401,11 @@ main .handoff-node {
          <li>
           <a href="#context-s1-4">
            컨텍스트 자산 관리
+          </a>
+         </li>
+         <li>
+          <a href="#context-s1-6">
+           규칙·메모리 파일 다루기
           </a>
          </li>
          <li>
@@ -1850,10 +2065,149 @@ main .handoff-node {
          </li>
         </ul>
        </div>
-       <div class="sub" id="overview-orchestration">
+       <div class="sub" id="overview-coding-agent">
         <h3>
          <span class="h3num">
           0.4
+         </span>
+         코딩 에이전트 — AI Agent가 실제로 코드를 다루는 방식
+        </h3>
+        <p>
+         코딩 에이전트는 0.3에서 본 AI Agent를 코드 작업에 특화한 형태다.
+         <code>
+          Claude Code
+         </code>
+         ·
+         <code>
+          Codex
+         </code>
+         ·
+         <code>
+          Cursor
+         </code>
+         처럼 “목표를 주면 스스로 코드베이스를 읽고, 고치고, 검증하는” 도구가 여기에 해당한다. 그래서 핵심은 한 번의 답변이 아니라
+         <strong>
+          작은 행동을 반복하는 실행 루프
+         </strong>
+         에 있다.
+        </p>
+        <div class="note key">
+         <span class="lab">
+          작동 루프
+         </span>
+         코딩 에이전트는
+         <b>
+          관찰 → 계획 → 도구 호출 → 결과 관찰
+         </b>
+         을 목표가 충족될 때까지 반복한다. 매 반복에서 “다음에 무엇을 할지”는 사람이 아니라 모델이 결정한다 — 이것이 Overview의 핵심 질문과 직접 연결된다.
+        </div>
+        <div class="trend">
+         <div class="t-row">
+          <span class="t-tag">
+           1. 입력
+          </span>
+          <h4>
+           목표 + 코드베이스 컨텍스트
+          </h4>
+          <p>
+           사용자가 “이 버그 고쳐줘”, “이 기능 추가해줘” 같은 목표를 준다. 에이전트는 작업 폴더, 열린 파일, 프로젝트 규칙(예: CLAUDE.md) 같은 맥락을 함께 읽어들여 출발점으로 삼는다.
+          </p>
+         </div>
+         <div class="t-row">
+          <span class="t-tag">
+           2. 실행 루프
+          </span>
+          <h4>
+           관찰 → 계획 → 도구 호출 → 결과 관찰
+          </h4>
+          <p>
+           에이전트는 파일 검색·읽기, 코드 수정, 터미널 명령, 테스트 실행 같은
+           <strong>
+            도구(tool)
+           </strong>
+           를 호출하고, 그 결과(에러 메시지, 테스트 통과 여부)를 다시 관찰해 다음 행동을 정한다. 실패하면 원인을 추정해 다시 시도한다.
+          </p>
+         </div>
+         <div class="t-row">
+          <span class="t-tag">
+           3. 종료·검토
+          </span>
+          <h4>
+           목표 충족 시 멈추고, 사람이 확인한다
+          </h4>
+          <p>
+           테스트가 통과하거나 목표가 달성되면 루프를 멈춘다. 사람의 역할은 매 단계를 지시하는 것이 아니라
+           <strong>
+            기준을 제시하고 결과를 검토·승인
+           </strong>
+           하는 쪽으로 바뀐다. 위험한 작업은 실행 전 승인을 받도록 설계하기도 한다.
+          </p>
+         </div>
+        </div>
+        <ul class="clean">
+         <li>
+          <b>
+           비유
+          </b>
+          — 코드베이스를 직접 열어보고 고친 뒤 테스트까지 돌려보고 오는 개발자
+         </li>
+         <li>
+          <b>
+           예시
+          </b>
+          — “로그인 버그 고쳐줘” → 관련 파일 검색 → 원인 코드 확인 → 수정 → 테스트 실행 → 실패 시 재수정 → 통과하면 종료
+         </li>
+         <li>
+          <b>
+           핵심 도구
+          </b>
+          — 파일 읽기·검색, 코드 편집, 터미널·명령 실행, 테스트 실행
+         </li>
+         <li>
+          <b>
+           대표 제품
+          </b>
+          —
+          <code>
+           Claude Code
+          </code>
+          ·
+          <code>
+           Codex
+          </code>
+          ·
+          <code>
+           Cursor
+          </code>
+         </li>
+        </ul>
+        <div class="note warn">
+         <span class="lab">
+          오해 주의
+         </span>
+         “알아서 끝까지 처리한다”는 아니다. 실무에서는 파일 수정·명령 실행에
+         <b>
+          권한과 승인
+         </b>
+         이 걸리고, 테스트가 있어야 결과를 검증할 수 있으며, 도구마다 규칙 파일도 다르다(
+         <code>
+          CLAUDE.md
+         </code>
+         ·
+         <code>
+          AGENTS.md
+         </code>
+         ·
+         <code>
+          .cursor/rules
+         </code>
+         ). 즉 사람의 기준 제시와 검토가 여전히 핵심이다.
+        </div>
+       </div>
+       <div class="sub" id="overview-orchestration">
+        <h3>
+         <span class="h3num">
+          0.5
          </span>
          Orchestration — 여러 Agent와 도구 흐름을 조율하는 구조
         </h3>
@@ -1929,7 +2283,7 @@ main .handoff-node {
        <div class="sub" id="overview-summary">
         <h3>
          <span class="h3num">
-          0.5
+          0.6
          </span>
          Summary
         </h3>
@@ -2005,6 +2359,101 @@ main .handoff-node {
           </tr>
          </tbody>
         </table>
+       </div>
+       <div class="sub" id="overview-products">
+        <h3>
+         <span class="h3num">
+          0.7
+         </span>
+         대표 상용 제품군 — LLM부터 AI Agent까지
+        </h3>
+        <p>
+         앞의 단계들을 실제 제품으로 연결하면 아래와 같다. 같은 벤더라도
+         <strong>
+          고성능·균형·경량
+         </strong>
+         처럼 성능·비용·속도를 나눈 티어를 함께 제공하므로, 작업 난이도에 맞춰 모델을 고르는 것이 기본이다.
+        </p>
+        <p class="sec-kicker soft">
+         아래 모델 버전은 2026.06 기준 최신 버전이다. (제품·세대는 빠르게 바뀌므로 실제 선택 시 재확인 권장)
+        </p>
+        <table class="map">
+         <thead>
+          <tr>
+           <th>
+            계층
+           </th>
+           <th>
+            대표 상용 제품군
+           </th>
+           <th>
+            특징
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            LLM (모델)
+           </td>
+           <td>
+            <span class="t">
+             Anthropic — Claude Opus 4.8 · Sonnet 4.6 · Haiku 4.5<br/>
+             OpenAI — GPT-5.5<br/>
+             Google — Gemini 2.5 Pro · Flash · Flash-Lite
+            </span>
+           </td>
+           <td>
+            같은 벤더가 고성능·균형·경량 티어를 나눠 제공
+           </td>
+          </tr>
+          <tr>
+           <td>
+            채팅형 제품
+           </td>
+           <td>
+            <span class="t">
+             ChatGPT · Claude · Gemini
+            </span>
+           </td>
+           <td>
+            모델을 감싼 단발 응답 채팅 UI
+           </td>
+          </tr>
+          <tr>
+           <td>
+            Workflow
+           </td>
+           <td>
+            <span class="t">
+             n8n · Zapier · Dify
+            </span>
+           </td>
+           <td>
+            사람이 설계한 고정 경로 자동화
+           </td>
+          </tr>
+          <tr>
+           <td>
+            AI Agent · 코딩 에이전트
+           </td>
+           <td>
+            <span class="t">
+             Claude Code · OpenAI Codex · Cursor (Composer)
+            </span>
+           </td>
+           <td>
+            목표 기반으로 도구를 호출하며 자율 실행
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <div class="note">
+         <span class="lab">
+          참고
+         </span>
+         제품명과 세대(버전)는 빠르게 바뀐다. 표는 “어떤 계층에 어떤 제품군이 있는지”를 잡는 용도이고, 실제 선택 시에는 최신 모델·티어와 가격을 별도로 확인하는 것이 좋다.
+        </div>
        </div>
        <footer>
         Overview
@@ -2581,6 +3030,81 @@ main .handoff-node {
          을 같이 줘야 한다. 제약은 모델을 답답하게 만드는 것이 아니라, 결과를 사용할 수 있게 만드는 안전장치다.
         </div>
        </div>
+
+       <div class="more-toggle-wrap">
+          <button
+            class="more-toggle-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="prompt-modern-ai-cli-note"
+            data-more-toggle="prompt-modern-ai-cli-note"
+          >
+            <span>요즘 AI CLI에서는 어떻게 달라졌나</span>
+            <span class="ico" aria-hidden="true">⌄</span>
+          </button>
+
+          <div class="modern-prompt-note" id="prompt-modern-ai-cli-note" hidden>
+            <span class="tag">
+              Modern AI CLI
+            </span>
+
+            <h4>
+              페르소나와 CoT를 직접 길게 넣기보다, 목표·범위·완료 기준을 주는 쪽이 중요해졌다
+            </h4>
+
+            <p>
+              최신 AI CLI는 단순히 모델을 호출하는 도구가 아니라, 코딩 에이전트처럼 동작하도록 시스템 프롬프트,
+              프로젝트 규칙, 파일 탐색, 명령 실행, 메모리, 도구 사용 방식이 함께 구성된 실행 환경에 가깝다.
+              그래서 예전처럼 “너는 시니어 개발자야”, “Chain of Thought로 단계별로 생각해”를 매번 길게 넣는 방식보다,
+              작업의 경계와 완료 조건을 명확히 주는 방식이 더 실무적이다.
+            </p>
+
+            <div class="modern-map">
+              <div class="modern-card">
+                <b>역할 부여</b>
+                <span>
+                  일반적인 페르소나보다 현재 프로젝트에서 어떤 기준으로 판단해야 하는지를 알려주는 것이 더 중요하다.
+                </span>
+              </div>
+
+              <div class="modern-card">
+                <b>CoT 지시</b>
+                <span>
+                  내부 사고 과정을 요구하기보다 판단 기준, 검토 단계, 요약된 근거, 최종 결론을 출력하게 하는 편이 낫다.
+                </span>
+              </div>
+
+              <div class="modern-card">
+                <b>제약 조건</b>
+                <span>
+                  수정 범위, 건드리면 안 되는 파일, 금지 작업, 확인 필요한 항목을 명확히 적어야 한다.
+                </span>
+              </div>
+
+              <div class="modern-card">
+                <b>완료 기준</b>
+                <span>
+                  테스트 통과, 변경 요약, 영향 범위 확인처럼 작업 종료 기준을 함께 줘야 결과를 검증하기 쉽다.
+                </span>
+              </div>
+            </div>
+
+            <div class="note key">
+              <span class="lab">
+                프롬프트 방향
+              </span>
+              요즘 AI CLI에서는
+              <b>
+                “어떤 사람이 되어라”
+              </b>
+              보다
+              <b>
+                “무엇을 어디까지 하고, 어떤 기준을 만족하면 끝나는가”
+              </b>
+              를 정해주는 것이 더 중요하다.
+            </div>
+          </div>
+        </div>
       </section>
       <section id="prompt-sec-3">
        <div class="sec-head">
@@ -3021,12 +3545,9 @@ main .handoff-node {
         <ul class="clean">
          <li>
           <b>
-           <code>
-            AGENTS.md
-           </code>
-           (규칙 파일)
+           규칙 파일
           </b>
-          — AI에게 프로젝트를 처음 소개하는 온보딩 문서. 언어·스타일·금지사항·디렉터리 구조·작업 규칙을 담아둔다.
+          — AI에게 프로젝트를 처음 소개하는 온보딩 문서. 언어·스타일·금지사항·디렉터리 구조·작업 규칙을 담아둔다. 도구마다 파일명과 형식이 다르다(아래 표).
          </li>
          <li>
           <b>
@@ -3047,6 +3568,74 @@ main .handoff-node {
           — 컨텍스트 창을 무작정 채우지 않고, 필요한 정보만 남기기 위한 관리 기준. 오래된 내용은 요약·정리·삭제한다.
          </li>
         </ul>
+        <p class="sec-kicker soft">
+         규칙·메모리 파일은 도구가 직접 읽는 컨텍스트 자산이다. 역할은 같지만 도구마다 파일명·위치·형식이 다르다.
+        </p>
+        <table class="map">
+         <thead>
+          <tr>
+           <th>
+            도구
+           </th>
+           <th>
+            규칙·메모리 파일
+           </th>
+           <th>
+            특징·사용
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            Claude Code
+           </td>
+           <td>
+            <span class="t">
+             <code>
+              CLAUDE.md
+             </code>
+             (Markdown)
+            </span>
+           </td>
+           <td>
+            실행 시 자동 로드. 전역(<code>~/.claude/CLAUDE.md</code>)·프로젝트 루트·하위 폴더 단위로 둘 수 있고, 가까운 파일일수록 좁은 범위에 적용된다.
+           </td>
+          </tr>
+          <tr>
+           <td>
+            Codex
+           </td>
+           <td>
+            <span class="t">
+             <code>
+              AGENTS.md
+             </code>
+             (Markdown)
+            </span>
+           </td>
+           <td>
+            저장소 루트에 두는 공개 표준 지시문. 특정 도구에 종속되지 않아 여러 에이전트가 함께 인식한다(Cursor도 인식).
+           </td>
+          </tr>
+          <tr>
+           <td>
+            Cursor
+           </td>
+           <td>
+            <span class="t">
+             <code>
+              .cursor/rules/*.mdc
+             </code>
+             (MDC)
+            </span>
+           </td>
+           <td>
+            본문 위에 frontmatter(<code>description</code>·<code>globs</code>·<code>alwaysApply</code>)를 둬, 특정 파일 범위에만 적용하는 규칙을 만들 수 있다.
+           </td>
+          </tr>
+         </tbody>
+        </table>
         <div class="note">
          <span class="lab">
           핵심
@@ -3058,10 +3647,116 @@ main .handoff-node {
          존재하도록 관리하는 일이다.
         </div>
        </div>
-       <div class="sub" id="context-s1-5">
+       <div class="sub" id="context-s1-6">
         <h3>
          <span class="h3num">
           1.4
+         </span>
+         규칙·메모리 파일 다루기
+        </h3>
+        <p>
+         규칙 파일 외에도, 프로젝트가 길어지면
+         <strong>
+          역할별로 나눈 공통 작업 문서
+         </strong>
+         를 함께 두면 컨텍스트를 잃지 않는다. 아래는 도구가 강제하는 형식이 아니라, 팀이 관례로 두는 문서 예시다(이름은 자유).
+        </p>
+        <table class="map">
+         <thead>
+          <tr>
+           <th>
+            문서
+           </th>
+           <th>
+            역할
+           </th>
+          </tr>
+         </thead>
+         <tbody>
+          <tr>
+           <td>
+            <code>
+             MEMORY.md
+            </code>
+           </td>
+           <td>
+            세션을 넘겨 유지할 배경지식·맥락을 누적 기록
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <code>
+             TASKS.md
+            </code>
+           </td>
+           <td>
+            진행 중 작업과 남은 할 일을 추적
+           </td>
+          </tr>
+          <tr>
+           <td>
+            <code>
+             DECISIONS.md
+            </code>
+           </td>
+           <td>
+            주요 결정과 그 이유를 기록(ADR 성격)
+           </td>
+          </tr>
+         </tbody>
+        </table>
+        <p class="sec-kicker soft">
+         실제 파일 예시 — 규칙 파일(CLAUDE.md / AGENTS.md)과 Cursor 룰(.mdc)
+        </p>
+        <pre class="code-panel"><code># 프로젝트 규칙 (CLAUDE.md / AGENTS.md 공통 형태)
+
+## 기술 스택
+- TypeScript, React, Vitest
+
+## 코딩 규칙
+- 함수형 컴포넌트만 사용
+- any 타입 금지
+
+## 검증 명령
+- 빌드: npm run build
+- 테스트: npm test
+- 린트: npm run lint</code></pre>
+        <pre class="code-panel"><code>---
+description: API 라우트 작성 규칙
+globs: src/api/**/*.ts
+alwaysApply: false
+---
+- 모든 핸들러는 zod로 입력을 검증한다
+- 에러는 표준 에러 응답 형식으로 반환한다</code></pre>
+        <div class="note key">
+         <span class="lab">
+          관리 원칙
+         </span>
+         <b>
+          짧게
+         </b>
+         — 꼭 필요한 규칙만 남긴다(길면 Context rot).
+         <br/>
+         <b>
+          최신으로
+         </b>
+         — 바뀐 규칙은 즉시 갱신하고 오래된 항목은 삭제한다.
+         <br/>
+         <b>
+          중복 없이
+         </b>
+         — 같은 규칙을 여러 파일에 흩어 두지 않는다.
+         <br/>
+         <b>
+          검증 명령 포함
+         </b>
+         — 빌드·테스트·린트 명령을 적어 두어, AI가 스스로 결과를 확인하게 한다.
+        </div>
+       </div>
+       <div class="sub" id="context-s1-5">
+        <h3>
+         <span class="h3num">
+          1.5
          </span>
          연결 고리
         </h3>
@@ -7578,6 +8273,30 @@ main .handoff-node {
 
       setActiveChapter(detectChapterFromHash(), false);
     })();
+
+      document.querySelectorAll("[data-more-toggle]").forEach((button) => {
+
+        button.addEventListener("click", () => {
+
+          const targetId = button.getAttribute("data-more-toggle");
+
+          const target = document.getElementById(targetId);
+
+          if (!target) {
+
+            return;
+
+          }
+
+          const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+          button.setAttribute("aria-expanded", String(!isExpanded));
+
+          target.hidden = isExpanded;
+
+        });
+
+      });
   </script>
  </body>
 </html>
